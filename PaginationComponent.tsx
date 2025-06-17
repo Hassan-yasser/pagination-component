@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 type TFootProps = {
+  
   page: number;
   currentPage: number;
   lastPage: number;
   onPageChange: (page: number) => void;
 };
-
+//  pass here state and setState with default value 1 , pass last page from backend 
 export default function TFoot({ page, lastPage, onPageChange }: TFootProps) {
   const [activeIndex, setActiveIndex] = useState(page - 1);
   const maxVisiblePages = 5;
